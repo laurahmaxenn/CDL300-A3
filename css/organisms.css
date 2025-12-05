@@ -1,0 +1,574 @@
+/* Organism Components */
+
+/* ========================================
+   DROPDOWN MENU
+   ======================================== */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__trigger {
+  /* Uses .btn atom styles */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.dropdown__icon {
+  /* Uses .icon atom styles */
+  transition: transform var(--transition-fast);
+}
+
+.dropdown--open .dropdown__icon {
+  transform: rotate(180deg);
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + var(--spacing-sm));
+  left: 0;
+  min-width: 200px;
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all var(--transition-base);
+  z-index: var(--z-dropdown);
+  list-style: none;
+  padding: var(--spacing-sm);
+  margin: 0;
+}
+
+.dropdown--open .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown__item {
+  margin: 0;
+}
+
+.dropdown__link {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.dropdown__link:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.dropdown__link:focus {
+  outline: none;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.dropdown__link:active {
+  background-color: var(--color-secondary-hover);
+}
+
+.dropdown__link--selected {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.dropdown__link--selected:hover {
+  background-color: var(--color-primary-hover);
+  color: white;
+}
+
+
+/* ========================================
+   RATINGS
+   ======================================== */
+
+.ratings {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.ratings__stars {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.ratings__star {
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-border-dark);
+  fill: var(--color-border-dark);
+}
+
+.ratings__star:hover {
+  transform: scale(1.1);
+}
+
+.ratings__star:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+.ratings__star--filled {
+  color: var(--color-warning);
+  fill: var(--color-warning);
+}
+
+.ratings__star--preview {
+  color: var(--color-warning);
+  fill: var(--color-warning);
+  opacity: 0.6;
+}
+
+.ratings--disabled .ratings__star {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ratings--disabled .ratings__star:hover {
+  transform: none;
+}
+
+.ratings__count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.ratings__value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+
+/* ========================================
+   FORM INPUT GROUP
+   ======================================== */
+
+.form-group {
+  max-width: 500px;
+  padding: var(--spacing-xl);
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.form-group__title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-group__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.form-group__submit {
+  /* Uses .btn atom styles */
+}
+
+.form-group__reset {
+  /* Uses .btn atom styles */
+}
+
+.form-group__message {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.form-group__message--success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border: var(--border-width) solid var(--color-success);
+}
+
+.form-group__message--error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-danger);
+  border: var(--border-width) solid var(--color-danger);
+}
+
+.form-group--submitting {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.form-group--submitting .form-group__submit {
+  position: relative;
+}
+
+.form-group--submitting .form-group__submit::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ========================================
+   TOOLTIP
+   ======================================== */
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-trigger {
+  /* Uses .btn or other atom styles */
+  cursor: help;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
+  border-radius: var(--border-radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
+  pointer-events: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Tooltip positions */
+.tooltip--top {
+  bottom: calc(100% + var(--spacing-sm));
+  left: 50%;
+  transform: translate(-50%, -4px);
+}
+
+.tooltip--top::before {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-color: var(--color-text) transparent transparent transparent;
+}
+
+.tooltip--bottom {
+  top: calc(100% + var(--spacing-sm));
+  left: 50%;
+  transform: translate(-50%, 4px);
+}
+
+.tooltip--bottom::before {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent var(--color-text) transparent;
+}
+
+.tooltip--left {
+  right: calc(100% + var(--spacing-sm));
+  top: 50%;
+  transform: translate(-4px, -50%);
+}
+
+.tooltip--left::before {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent var(--color-text);
+}
+
+.tooltip--right {
+  left: calc(100% + var(--spacing-sm));
+  top: 50%;
+  transform: translate(4px, -50%);
+}
+
+.tooltip--right::before {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 6px 6px 0;
+  border-color: transparent var(--color-text) transparent transparent;
+}
+
+/* Visible state */
+.tooltip--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip--visible.tooltip--top {
+  transform: translate(-50%, 0);
+}
+
+.tooltip--visible.tooltip--bottom {
+  transform: translate(-50%, 0);
+}
+
+.tooltip--visible.tooltip--left {
+  transform: translate(0, -50%);
+}
+
+.tooltip--visible.tooltip--right {
+  transform: translate(0, -50%);
+}
+
+
+/* ========================================
+   PAGINATION
+   ======================================== */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination__item {
+  margin: 0;
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  background-color: transparent;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pagination__link:hover:not(.pagination__link--disabled):not(.pagination__link--active) {
+  background-color: var(--color-secondary);
+  border-color: transparent;
+  color: var(--color-text);
+}
+
+.pagination__link:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-border-dark);
+}
+
+.pagination__link--active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination__link--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination__icon {
+  /* Uses .icon atom styles */
+  width: 1rem;
+  height: 1rem;
+}
+
+.pagination__ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  color: var(--color-text-muted);
+  user-select: none;
+}
+
+
+/* ========================================
+   PROGRESS TRACKER
+   ======================================== */
+
+.progress-tracker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: var(--spacing-md) 0;
+}
+
+.progress-tracker__line {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background-color: var(--color-border);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.progress-tracker__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.progress-tracker__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.progress-tracker__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.progress-tracker__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  max-width: 100px;
+  transition: color var(--transition-fast);
+}
+
+/* Step states */
+.progress-tracker__step--completed .progress-tracker__circle {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.progress-tracker__step--completed .progress-tracker__label {
+  color: var(--color-text);
+}
+
+.progress-tracker__step--current .progress-tracker__circle {
+  border-color: var(--color-primary);
+  border-width: 2px;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  box-shadow: 0 0 0 4px rgba(24, 24, 27, 0.1);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.progress-tracker__step--current .progress-tracker__label {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.progress-tracker__step--error .progress-tracker__circle {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  color: white;
+}
+
+.progress-tracker__step--error .progress-tracker__label {
+  color: var(--color-danger);
+}
+
+/* Clickable steps */
+.progress-tracker__step--clickable {
+  cursor: pointer;
+}
+
+.progress-tracker__step--clickable:hover .progress-tracker__circle {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.progress-tracker__step--clickable:focus {
+  outline: none;
+}
+
+.progress-tracker__step--clickable:focus .progress-tracker__circle {
+  box-shadow: var(--shadow-focus);
+}
+
+/* Check icon for completed steps */
+.progress-tracker__check {
+  width: 14px;
+  height: 14px;
+  fill: white;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(24, 24, 27, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(24, 24, 27, 0.15);
+  }
+}

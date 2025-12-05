@@ -1,0 +1,94 @@
+/* Molecule Components */
+
+/* ========================================
+   FORM FIELD
+   ======================================== */
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-md);
+}
+
+.form-field__label {
+  /* Uses .label atom styles */
+}
+
+.form-field__input {
+  /* Uses .input atom styles */
+}
+
+.form-field__error {
+  /* Uses .error-message atom styles */
+}
+
+.form-field--error .form-field__input {
+  border-color: var(--color-danger);
+}
+
+/* ========================================
+   SEARCH BAR
+   ======================================== */
+
+.search-bar {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar__input {
+  flex: 1;
+  /* Uses .input atom styles */
+}
+
+.search-bar__button {
+  /* Uses .btn atom styles */
+  flex-shrink: 0;
+}
+
+.search-bar__icon {
+  /* Uses .icon atom styles */
+}
+
+/* ========================================
+   CARD HEADER
+   ======================================== */
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg);
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast);
+}
+
+.card-header:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-header__content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.card-header__icon {
+  /* Uses .icon atom styles */
+  color: var(--color-text-muted);
+  fill: var(--color-text-muted);
+}
+
+.card-header__title {
+  /* Uses heading atom styles */
+  margin: 0;
+}
+
+.card-header__action {
+  /* Uses .btn atom styles */
+}

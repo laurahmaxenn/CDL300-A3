@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Component Library - A collection of reusable UI components built with atomic design principles">
+  <title>Component Library</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/atoms.css">
+  <link rel="stylesheet" href="css/molecules.css">
+  <link rel="stylesheet" href="css/organisms.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="container">8</div>
+    <header class="library-header">
+      <h1>Component Library</h1>
+      <p class="library-description">A collection of reusable UI components built with atomic design principles</p>
+      
+      <nav class="library-nav" aria-label="Component sections">
+        <a href="#atoms" class="btn btn--ghost btn--small">Atoms</a>
+        <a href="#molecules" class="btn btn--ghost btn--small">Molecules</a>
+        <a href="#organisms" class="btn btn--ghost btn--small">Organisms</a>
+      </nav>
+    </header>
+
+    <main id="main-content"></main>
+      <!-- Atoms Section -->
+      <section class="section" id="atoms">
+        <h2>Atoms</h2>
+        <p>The smallest building blocks of the UI - buttons, inputs, labels, icons, and typography elements.</p>
+        
+        <!-- Buttons -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Buttons</h3>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Primary Button</p>
+              <button class="btn btn--primary">Primary Button</button>
+              <button class="btn btn--primary" disabled>Disabled</button>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Secondary Button</p>
+              <button class="btn btn--secondary">Secondary Button</button>
+              <button class="btn btn--secondary" disabled>Disabled</button>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Danger Button</p>
+              <button class="btn btn--danger">Danger Button</button>
+              <button class="btn btn--danger" disabled>Disabled</button>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Ghost Button</p>
+              <button class="btn btn--ghost">Ghost Button</button>
+              <button class="btn btn--ghost" disabled>Disabled</button>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Button Sizes</p>
+              <button class="btn btn--primary btn--small">Small</button>
+              <button class="btn btn--primary">Medium</button>
+              <button class="btn btn--primary btn--large">Large</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inputs -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Input Fields</h3>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Text Input</p>
+              <input type="text" class="input" placeholder="Enter text..." aria-label="Text input">
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Email Input</p>
+              <input type="email" class="input" placeholder="Enter email..." aria-label="Email input">
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Password Input</p>
+              <input type="password" class="input" placeholder="Enter password..." aria-label="Password input">
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Number Input</p>
+              <input type="number" class="input" placeholder="Enter number..." aria-label="Number input">
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Error State</p>
+              <input type="text" class="input input--error" value="Invalid input" aria-label="Input with error" aria-invalid="true">
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Disabled State</p>
+              <input type="text" class="input" placeholder="Disabled input" disabled aria-label="Disabled input">
+            </div>
+          </div>
+        </div>
+
+        <!-- Labels -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Labels</h3>
+          <div class="component-variants">
+            <div class="variant-group">
+              <label class="label">Standard Label</label>
+              <label class="label label--required">Required Label</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Typography</h3>
+          <div class="component-variants">
+            <h1 class="heading-1">Heading 1</h1>
+            <h2 class="heading-2">Heading 2</h2>
+            <h3 class="heading-3">Heading 3</h3>
+            <h4 class="heading-4">Heading 4</h4>
+            <h5 class="heading-5">Heading 5</h5>
+            <h6 class="heading-6">Heading 6</h6>
+            <p class="text-body">Body text - The quick brown fox jumps over the lazy dog.</p>
+            <p class="text-small">Small text - The quick brown fox jumps over the lazy dog.</p>
+            <p class="text-caption">Caption text - The quick brown fox jumps over the lazy dog.</p>
+          </div>
+        </div>
+
+        <!-- Icons -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Icons</h3>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Icon Sizes</p>
+              <div style="display: flex; gap: var(--spacing-md); align-items: center;">
+                <svg class="icon icon--small" viewBox="0 0 24 24" aria-label="Small star icon">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="icon" viewBox="0 0 24 24" aria-label="Medium star icon">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="icon icon--large" viewBox="0 0 24 24" aria-label="Large star icon">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="icon icon--xl" viewBox="0 0 24 24" aria-label="Extra large star icon">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Molecules Section -->
+      <section class="section" id="molecules">
+        <h2>Molecules</h2>
+        <p>Simple groups of atoms functioning together as a unit.</p>
+        
+        <!-- Form Field -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Form Field</h3>
+          <p class="text-small">Composition: Label + Input + Error Message</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Standard Form Field</p>
+              <div class="form-field">
+                <label class="form-field__label label" for="demo-email">Email Address</label>
+                <input type="email" id="demo-email" class="form-field__input input" placeholder="you@example.com" aria-label="Email address">
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Required Form Field</p>
+              <div class="form-field">
+                <label class="form-field__label label label--required" for="demo-password">Password</label>
+                <input type="password" id="demo-password" class="form-field__input input" placeholder="Enter password" aria-label="Password" aria-required="true">
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Form Field with Error</p>
+              <div class="form-field form-field--error">
+                <label class="form-field__label label" for="demo-username">Username</label>
+                <input type="text" id="demo-username" class="form-field__input input input--error" value="ab" aria-label="Username" aria-invalid="true" aria-describedby="username-error">
+                <span id="username-error" class="form-field__error error-message" role="alert">Username must be at least 3 characters</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Search Bar</h3>
+          <p class="text-small">Composition: Input + Button + Icon</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Standard Search Bar</p>
+              <div class="search-bar">
+                <input type="search" class="search-bar__input input" placeholder="Search..." aria-label="Search">
+                <button class="search-bar__button btn btn--primary" aria-label="Submit search">
+                  <svg class="search-bar__icon icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Search Bar with Ghost Button</p>
+              <div class="search-bar">
+                <input type="search" class="search-bar__input input" placeholder="Search..." aria-label="Search">
+                <button class="search-bar__button btn btn--ghost" aria-label="Submit search">
+                  <svg class="search-bar__icon icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Header -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Card Header</h3>
+          <p class="text-small">Composition: Icon + Title + Action Button</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Card Header with Action</p>
+              <div class="card-header">
+                <div class="card-header__content">
+                  <svg class="card-header__icon icon icon--large" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <h4 class="card-header__title heading-4">Featured Content</h4>
+                </div>
+                <button class="card-header__action btn btn--ghost btn--small" aria-label="View more">View More</button>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Card Header without Icon</p>
+              <div class="card-header">
+                <div class="card-header__content">
+                  <h4 class="card-header__title heading-4">Simple Card Title</h4>
+                </div>
+                <button class="card-header__action btn btn--primary btn--small" aria-label="Edit card">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organisms Section -->
+      <section class="section" id="organisms">
+        <h2>Interactive Organisms</h2>
+        <p>Complex UI components with interactive and animated behaviors.</p>
+        
+        <!-- Dropdown Menu -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Dropdown Menu <span class="text-small" style="color: var(--color-primary);">(Interactive)</span></h3>
+          <p class="text-small">Composition: Button + Menu List + Menu Items | States: Closed, Open, Hover, Focus, Keyboard Navigation</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Standard Dropdown</p>
+              <div class="dropdown">
+                <button class="dropdown__trigger btn btn--primary" aria-label="Select an option">
+                  <span class="dropdown__trigger-text">Select Option</span>
+                  <svg class="dropdown__icon icon icon--small" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 10l5 5 5-5z"/>
+                  </svg>
+                </button>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Option 1</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Option 2</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Option 3</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Option 4</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Secondary Dropdown</p>
+              <div class="dropdown">
+                <button class="dropdown__trigger btn btn--secondary" aria-label="Select a category">
+                  <span class="dropdown__trigger-text">Categories</span>
+                  <svg class="dropdown__icon icon icon--small" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 10l5 5 5-5z"/>
+                  </svg>
+                </button>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Technology</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Design</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Business</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Marketing</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Ghost Dropdown</p>
+              <div class="dropdown">
+                <button class="dropdown__trigger btn btn--ghost" aria-label="More actions">
+                  <span class="dropdown__trigger-text">Actions</span>
+                  <svg class="dropdown__icon icon icon--small" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 10l5 5 5-5z"/>
+                  </svg>
+                </button>
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Edit</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Duplicate</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Archive</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link" tabindex="-1">Delete</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ratings -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Ratings <span class="text-small" style="color: var(--color-primary);">(Interactive/Animated)</span></h3>
+          <p class="text-small">Composition: Star Icons + Count Display | States: Unrated, Hover Preview, Rated, Disabled</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Interactive Ratings</p>
+              <div class="ratings">
+                <div class="ratings__stars">
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <p class="ratings__count">Rating: <span class="ratings__value">0</span> / 5</p>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Pre-rated (3 stars)</p>
+              <div class="ratings">
+                <div class="ratings__stars">
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <p class="ratings__count">Rating: <span class="ratings__value">3</span> / 5</p>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Disabled State</p>
+              <div class="ratings ratings--disabled">
+                <div class="ratings__stars">
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large ratings__star--filled" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <svg class="ratings__star icon icon--large" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <p class="ratings__count">Rating: <span class="ratings__value">4</span> / 5 (Disabled)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Input Group -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Form Input Group <span class="text-small" style="color: var(--color-primary);">(Interactive)</span></h3>
+          <p class="text-small">Composition: Form Fields + Validation + Submit Button | States: Empty, Typing, Valid, Invalid, Submitting, Success</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Contact Form with Validation</p>
+              <form class="form-group" id="demo-form" novalidate>
+                <h4 class="form-group__title heading-4">Contact Us</h4>
+                <div class="form-group__fields">
+                  <div class="form-field">
+                    <label class="form-field__label label label--required" for="form-name">Full Name</label>
+                    <input type="text" id="form-name" class="form-field__input input" placeholder="John Doe" required aria-required="true" aria-describedby="name-error">
+                    <span id="name-error" class="form-field__error error-message" role="alert"></span>
+                  </div>
+                  
+                  <div class="form-field">
+                    <label class="form-field__label label label--required" for="form-email">Email Address</label>
+                    <input type="email" id="form-email" class="form-field__input input" placeholder="john@example.com" required aria-required="true" aria-describedby="email-error">
+                    <span id="email-error" class="form-field__error error-message" role="alert"></span>
+                  </div>
+                  
+                  <div class="form-field">
+                    <label class="form-field__label label label--required" for="form-message">Message</label>
+                    <textarea id="form-message" class="form-field__input input" placeholder="Your message..." rows="4" required aria-required="true" aria-describedby="message-error" style="resize: vertical;"></textarea>
+                    <span id="message-error" class="form-field__error error-message" role="alert"></span>
+                  </div>
+                </div>
+                
+                <div class="form-group__actions">
+                  <button type="submit" class="form-group__submit btn btn--primary">Submit</button>
+                  <button type="reset" class="form-group__reset btn btn--ghost">Reset</button>
+                </div>
+                
+                <div id="form-message-display" class="form-group__message" style="display: none;" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tooltip -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Tooltip <span class="text-small" style="color: var(--color-primary);">(Interactive/Animated)</span></h3>
+          <p class="text-small">Composition: Trigger Element + Tooltip Content | States: Hidden, Visible on Hover, Visible on Focus, Positioned</p>
+          <div class="component-variants">
+            <div class="variant-group" style="display: flex; gap: var(--spacing-xl); flex-wrap: wrap; padding: var(--spacing-3xl) var(--spacing-xl);">
+              <div style="display: flex; flex-direction: column; gap: var(--spacing-md); align-items: center;">
+                <p class="text-small">Top Position</p>
+                <div class="tooltip-wrapper">
+                  <button class="tooltip-trigger btn btn--primary" aria-label="Button with tooltip">
+                    Hover Me (Top)
+                  </button>
+                  <div class="tooltip tooltip--top">This is a tooltip on top</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--spacing-md); align-items: center;">
+                <p class="text-small">Bottom Position</p>
+                <div class="tooltip-wrapper">
+                  <button class="tooltip-trigger btn btn--secondary" aria-label="Button with tooltip">
+                    Hover Me (Bottom)
+                  </button>
+                  <div class="tooltip tooltip--bottom">This is a tooltip on bottom</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--spacing-md); align-items: center;">
+                <p class="text-small">Left Position</p>
+                <div class="tooltip-wrapper">
+                  <button class="tooltip-trigger btn btn--ghost" aria-label="Button with tooltip">
+                    Hover Me (Left)
+                  </button>
+                  <div class="tooltip tooltip--left">Tooltip on left</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: var(--spacing-md); align-items: center;">
+                <p class="text-small">Right Position</p>
+                <div class="tooltip-wrapper">
+                  <button class="tooltip-trigger btn btn--danger" aria-label="Button with tooltip">
+                    Hover Me (Right)
+                  </button>
+                  <div class="tooltip tooltip--right">Tooltip on right</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Tooltip on Text (Keyboard Accessible)</p>
+              <p class="text-body">
+                This is some text with a 
+                <span class="tooltip-wrapper">
+                  <span class="tooltip-trigger" tabindex="0" style="text-decoration: underline; text-decoration-style: dotted; cursor: help;">helpful tooltip</span>
+                  <span class="tooltip tooltip--top">This tooltip appears on focus too!</span>
+                </span>
+                that you can hover or focus with keyboard.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Pagination <span class="text-small" style="color: var(--color-primary);">(Interactive)</span></h3>
+          <p class="text-small">Composition: Page Buttons + Previous/Next Buttons + Current Page Indicator | States: Active Page, Inactive Pages, Hover, Disabled</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Standard Pagination (10 pages, page 1)</p>
+              <nav id="demo-pagination-1"></nav>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Pagination with Ellipsis (20 pages, page 5)</p>
+              <nav id="demo-pagination-2"></nav>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Single Page (Disabled State)</p>
+              <nav id="demo-pagination-3"></nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="component-showcase">
+          <h3 class="heading-3">Progress Tracker <span class="text-small" style="color: var(--color-primary);">(Interactive/Animated)</span></h3>
+          <p class="text-small">Composition: Step Indicators + Connecting Lines + Labels | States: Completed Steps, Current Step, Upcoming Steps, Error State</p>
+          <div class="component-variants">
+            <div class="variant-group">
+              <p class="text-small">Progress Tracker - Step 1 (Clickable)</p>
+              <div id="demo-tracker-1" class="progress-tracker">
+                <div class="progress-tracker__line">
+                  <div class="progress-tracker__progress"></div>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">1</div>
+                  <span class="progress-tracker__label">Account</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">2</div>
+                  <span class="progress-tracker__label">Profile</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">3</div>
+                  <span class="progress-tracker__label">Preferences</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">4</div>
+                  <span class="progress-tracker__label">Complete</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Progress Tracker - Step 3 (In Progress)</p>
+              <div id="demo-tracker-2" class="progress-tracker">
+                <div class="progress-tracker__line">
+                  <div class="progress-tracker__progress"></div>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">1</div>
+                  <span class="progress-tracker__label">Order</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">2</div>
+                  <span class="progress-tracker__label">Shipping</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">3</div>
+                  <span class="progress-tracker__label">Payment</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">4</div>
+                  <span class="progress-tracker__label">Confirm</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="variant-group">
+              <p class="text-small">Progress Tracker - Completed</p>
+              <div id="demo-tracker-3" class="progress-tracker">
+                <div class="progress-tracker__line">
+                  <div class="progress-tracker__progress"></div>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">1</div>
+                  <span class="progress-tracker__label">Start</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">2</div>
+                  <span class="progress-tracker__label">Process</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">3</div>
+                  <span class="progress-tracker__label">Review</span>
+                </div>
+                <div class="progress-tracker__step">
+                  <div class="progress-tracker__circle">4</div>
+                  <span class="progress-tracker__label">Done</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="library-footer">
+      <p>&copy; 2024 Component Library - CLD300 Assessment 3</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/animations.js"></script>
+  <script src="js/dropdown.js"></script>
+  <script src="js/ratings.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/progress-tracker.js"></script>
+  
+  <!-- Form Validation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('demo-form');
+      if (!form) return;
+      
+      const nameInput = document.getElementById('form-name');
+      const emailInput = document.getElementById('form-email');
+      const messageInput = document.getElementById('form-message');
+      const messageDisplay = document.getElementById('form-message-display');
+      
+      // Validation functions
+      const validateName = () => {
+        const value = nameInput.value.trim();
+        const errorSpan = document.getElementById('name-error');
+        
+        if (value.length === 0) {
+          showError(nameInput, errorSpan, 'Name is required');
+          return false;
+        } else if (value.length < 2) {
+          showError(nameInput, errorSpan, 'Name must be at least 2 characters');
+          return false;
+        } else {
+          clearError(nameInput, errorSpan);
+          return true;
+        }
+      };
+      
+      const validateEmail = () => {
+        const value = emailInput.value.trim();
+        const errorSpan = document.getElementById('email-error');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (value.length === 0) {
+          showError(emailInput, errorSpan, 'Email is required');
+          return false;
+        } else if (!emailRegex.test(value)) {
+          showError(emailInput, errorSpan, 'Please enter a valid email address');
+          return false;
+        } else {
+          clearError(emailInput, errorSpan);
+          return true;
+        }
+      };
+      
+      const validateMessage = () => {
+        const value = messageInput.value.trim();
+        const errorSpan = document.getElementById('message-error');
+        
+        if (value.length === 0) {
+          showError(messageInput, errorSpan, 'Message is required');
+          return false;
+        } else if (value.length < 10) {
+          showError(messageInput, errorSpan, 'Message must be at least 10 characters');
+          return false;
+        } else {
+          clearError(messageInput, errorSpan);
+          return true;
+        }
+      };
+      
+      const showError = (input, errorSpan, message) => {
+        input.classList.add('input--error');
+        input.setAttribute('aria-invalid', 'true');
+        input.parentElement.classList.add('form-field--error');
+        errorSpan.textContent = message;
+      };
+      
+      const clearError = (input, errorSpan) => {
+        input.classList.remove('input--error');
+        input.setAttribute('aria-invalid', 'false');
+        input.parentElement.classList.remove('form-field--error');
+        errorSpan.textContent = '';
+      };
+      
+      // Real-time validation on blur
+      nameInput.addEventListener('blur', validateName);
+      emailInput.addEventListener('blur', validateEmail);
+      messageInput.addEventListener('blur', validateMessage);
+      
+      // Form submission
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Validate all fields
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isMessageValid = validateMessage();
+        
+        if (isNameValid && isEmailValid && isMessageValid) {
+          // Show submitting state
+          form.classList.add('form-group--submitting');
+          messageDisplay.style.display = 'none';
+          
+          // Simulate API call
+          setTimeout(() => {
+            form.classList.remove('form-group--submitting');
+            
+            // Show success message
+            messageDisplay.textContent = 'Form submitted successfully!';
+            messageDisplay.className = 'form-group__message form-group__message--success';
+            messageDisplay.style.display = 'block';
+            
+            // Reset form after success
+            setTimeout(() => {
+              form.reset();
+              messageDisplay.style.display = 'none';
+            }, 3000);
+          }, 1500);
+        } else {
+          // Show error message
+          messageDisplay.textContent = 'Please fix the errors above before submitting.';
+          messageDisplay.className = 'form-group__message form-group__message--error';
+          messageDisplay.style.display = 'block';
+        }
+      });
+      
+      // Reset button
+      form.addEventListener('reset', () => {
+        // Clear all errors
+        clearError(nameInput, document.getElementById('name-error'));
+        clearError(emailInput, document.getElementById('email-error'));
+        clearError(messageInput, document.getElementById('message-error'));
+        messageDisplay.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
